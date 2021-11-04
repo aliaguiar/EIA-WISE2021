@@ -4,3 +4,19 @@ body{
     background-repeat: repeat;
     font-family: 'Times New Roman', Times, serif;
 }
+
+div{
+    background-image: url(./images/wrapperbg.png);
+    background-repeat: repeat-y;
+    background-size: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kasten{
+    border-top: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-bottom: auto;
+    word-wrap: break-word;
+}
