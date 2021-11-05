@@ -45,6 +45,6 @@ img[alt="Stern 4"]{
     position: relative;
 }
 
-.container:hover .overlay{
-    image: url(./images/stern_hover.png);
+img:hover{
+    background-image: url(./images/stern_hover.png);
 }
