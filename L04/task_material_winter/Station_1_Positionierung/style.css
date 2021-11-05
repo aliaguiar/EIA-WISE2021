@@ -7,16 +7,27 @@ body{
 
 div{
     background-image: url(./images/wrapperbg.png);
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-size: fixed;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
+    margin-top: 13%;
 }
 
 .kasten{
-    border-top: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-    border-bottom: auto;
     word-wrap: break-word;
+    margin: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#Busch{
+    position:relative;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+
+#Pinguin{
+    position:relative;
+    margin-left: 45%;
+    margin-top: -3%;
 }
