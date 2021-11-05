@@ -1,0 +1,24 @@
+body{
+    background-image: url(./images/bg.png);
+    background-repeat: repeat;
+    color: white;
+    font-family: Jellyka_Font;
+    src: url(./fonts/Jellyka_Delicious_Cake.ttf);
+}
+
+@font-face {
+    font-family: Jellyka_Font;
+    src: url(./fonts/Jellyka_Delicious_Cake.ttf);
+}
+
+.text{
+    background-image: url(./images/wrapperbg.png);
+    background-repeat: no-repeat;
+    font-family: Jellyka_Font;
+    margin-left: 450px;
+    margin-top: 200px;
+    border-left: 20px;
+    border-top: 20px;
+    padding-left: 35px;
+    padding-top: 25px;
+}
