@@ -28,6 +28,6 @@ div{
 
 #Pinguin{
     position:relative;
-    margin-left: 45%;
-    margin-top: -3%;
+    left: 500px;
+    top: -3px;
 }
