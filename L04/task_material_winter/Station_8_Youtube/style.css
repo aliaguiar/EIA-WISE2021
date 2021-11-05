@@ -1,0 +1,26 @@
+body{
+    background-image: url(./images/bg.png);
+    background-repeat: repeat;
+}
+
+div{
+    background-image: url(./images/wrapperbg.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 200px;
+    margin-left: 400px;
+}
+
+iframe{
+    position:relative;
+    z-index: 2;
+}
+
+img[alt=banderole]{
+    position: relative;
+    z-index: 3;
+    right: 225px;
+}

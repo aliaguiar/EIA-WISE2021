@@ -1,0 +1,19 @@
+body{
+    background-image: url(./images/bg.png);
+    background-repeat: repeat;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#container{
+    background-image: url(./images/wrapperbg.png);
+    background-repeat: no-repeat;
+    margin-top: 200px;
+    margin-left: 400px;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+input{
+    padding: 3px;
+}
