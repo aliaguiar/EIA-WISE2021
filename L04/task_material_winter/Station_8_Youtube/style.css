@@ -4,23 +4,27 @@ body{
 }
 
 div{
-    background-image: url(./images/wrapperbg.png);
-    background-repeat: no-repeat;
+    background-image: url("images/wrapperbg.png");
     position: absolute;
+    width: 600px;
+    height: 400px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    padding-left: 20px;
-    padding-top: 20px;
-    margin-top: 200px;
-    margin-left: 400px;
 }
 
 iframe{
     position:relative;
     z-index: 2;
+    transform: translate(4%, 12%);
 }
 
 img[alt=banderole]{
     position: relative;
     z-index: 3;
-    right: 225px;
+    right: -370px;
+    bottom: 45px;
 }

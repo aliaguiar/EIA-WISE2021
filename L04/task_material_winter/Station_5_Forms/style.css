@@ -5,15 +5,29 @@ body{
     color: white;
 }
 
+h1{
+    position: relative;
+    left:50px;
+    top:15px;
+}
+
 #container{
-    background-image: url(./images/wrapperbg.png);
-    background-repeat: no-repeat;
-    margin-top: 200px;
-    margin-left: 400px;
-    padding-left: 30px;
-    padding-top: 50px;
+        background-image: url("images/wrapperbg.png");
+        position: absolute;
+        width: 600px;
+        height: 400px;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
 }
 
 input{
     padding: 3px;
+}
+
+.formular{
+    position: relative;
+    left: 50px;
 }

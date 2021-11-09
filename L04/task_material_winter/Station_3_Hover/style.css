@@ -5,11 +5,15 @@ body{
 }
 
 .Kasten{
-    background-image: url(./images/wrapperbg.png);
-    background-repeat: no-repeat;
-    position: relative;
-    margin-top: 200px;
-    margin-left: 400px;
+    background-image: url("images/wrapperbg.png");
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 .Titel{
@@ -19,28 +23,28 @@ body{
 }
 
 img[alt="Stern 1"]{
-    margin-top: 100px;
-    margin-left: 75px;
+    top: 75px;
+    left: 350px;
     border-bottom: 25px;
     position: relative;
 }
 
 img[alt="Stern 2"]{
-    margin-bottom: 100px;
-    margin-left: 90px;
+    bottom: 25px;
+    left: 150px;
     border-bottom: 50px;
     position: relative;
 }
 
 img[alt="Stern 3"]{
-    margin-top: 100px;
-    margin-right: 90px;
+    top: 75px;
+    right: 50px;
     position: relative;
 }
 
 img[alt="Stern 4"]{
-    margin-bottom: 100px;
-    margin-right: 75px;
+    bottom: 25px;
+    left: 225px;
     border-bottom: 50px;
     position: relative;
 }
