@@ -42,7 +42,7 @@ function southamerica() {
     document.querySelector(".chart").setAttribute("style", "height:" + (SAM2018 / ALL2018) * 100 + "%");
 }
 window.addEventListener('load', function () {
-    document.querySelector(".soutamerica").addEventListener('click', southamerica);
+    document.querySelector(".southamerica").addEventListener('click', southamerica);
 });
 function northamerica() {
     console.log("Die Emission von Europa ist:, " + NAM2018, " kg CO2. Relativ zur Gesamtemission der Welt verursacht Europa damit, " + (NAM2018 / ALL2018) * 100, "%. Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + NAM2018 / NAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das " + difnam, " kg CO2");

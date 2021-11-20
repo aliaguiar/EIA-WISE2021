@@ -54,7 +54,7 @@ function southamerica() {
     }
     
     window.addEventListener('load', function () {
-        document.querySelector(".soutamerica").addEventListener('click', southamerica);
+        document.querySelector(".southamerica").addEventListener('click', southamerica);
     })
     
     function northamerica() {
