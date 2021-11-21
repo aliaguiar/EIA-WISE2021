@@ -25,6 +25,24 @@ var difafr:number= AFR2018-AFR2008;
 var difasi:number= ASI2018-ASI2008;
 var difaus:number= AUS2018-AUS2008;
 
+var eu1:number=(EUR2018/ALL2018)*100;
+var eu2:number=EUR2018/EUR2008;
+
+var sa1:number=(SAM2018/ALL2018)*100;
+var sa2:number=SAM2018/SAM2008;
+
+var na1:number=(NAM2018/ALL2018)*100;
+var na2:number=NAM2018/NAM2008;
+
+var af1:number=(AFR2018/ALL2018)*100;
+var af2:number=AFR2018/AFR2008;
+
+var as1:number=(ASI2018/ALL2018)*100;
+var as2:number=ASI2018/ASI2008;
+
+var au1:number=(AUS2018/ALL2018)*100;
+var au2:number=AUS2018/AUS2008;
+
 console.log("Die Emission weltweit ist: "+ ALL2018, " kg CO2")
 
 function europe() {
@@ -32,9 +50,9 @@ function europe() {
     document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Europe"
     document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Europe in 2018";
     document.querySelector(".absoluteEmission").innerHTML = EUR2018 +"";
-    document.querySelector(".relativePercentage").innerHTML = (EUR2018/ALL2018)*100 +""
-    document.querySelector(".growthPercentage").innerHTML = EUR2018/EUR2008 +""
-    document.querySelector(".growthEmission").innerHTML = difeur +""
+    document.querySelector(".relativePercentage").innerHTML = eu1.toFixed(2) +"%" +""
+    document.querySelector(".growthPercentage").innerHTML = eu2.toFixed(2) +"%" +""
+    document.querySelector(".growthEmission").innerHTML = difeur.toFixed(2) +"kg" +""
     document.querySelector(".chart").setAttribute("style", "height:"+(EUR2018/ALL2018)*100 +"%")
     }
 
@@ -43,13 +61,13 @@ function europe() {
     })
 
 function southamerica() {
-    console.log("Die Emission von Europa ist:, "+ SAM2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Europa damit, "+ (SAM2018/ALL2018)*100, "%. Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um "+ SAM2018/SAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difsam, " kg CO2");
+    console.log("Die Emission von Südamerika ist:, "+ SAM2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Südamerika damit, "+ (SAM2018/ALL2018)*100, "%. Für Südamerika hat sich 2018 im Vergleich zu 2008 die Emission um "+ SAM2018/SAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difsam, " kg CO2");
     document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Southamerica"
     document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Southamerica in 2018";
     document.querySelector(".absoluteEmission").innerHTML = SAM2018 +"";
-    document.querySelector(".relativePercentage").innerHTML = (SAM2018/ALL2018)*100 +""
-    document.querySelector(".growthPercentage").innerHTML = SAM2018/SAM2008 +""
-    document.querySelector(".growthEmission").innerHTML = difsam +""
+    document.querySelector(".relativePercentage").innerHTML = sa1.toFixed(2) +"%" +""
+    document.querySelector(".growthPercentage").innerHTML = sa2.toFixed(2) +"%" +""
+    document.querySelector(".growthEmission").innerHTML = difsam.toFixed(2) +"kg" +""
     document.querySelector(".chart").setAttribute("style", "height:"+(SAM2018/ALL2018)*100 +"%")
     }
     
@@ -57,24 +75,62 @@ function southamerica() {
         document.querySelector(".southamerica").addEventListener('click', southamerica);
     })
     
-    function northamerica() {
-            console.log("Die Emission von Europa ist:, "+ NAM2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Europa damit, "+ (NAM2018/ALL2018)*100, "%. Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um "+ NAM2018/NAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difnam, " kg CO2");
+function northamerica() {
+        console.log("Die Emission von Nordamerika ist:, "+ NAM2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Nordamerika damit, "+ (NAM2018/ALL2018)*100, "%. Für Nordamerika hat sich 2018 im Vergleich zu 2008 die Emission um "+ NAM2018/NAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difnam, " kg CO2");
         document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Northamerica"
-        document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Nortamerica in 2018";
+        document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Northamerica in 2018";
         document.querySelector(".absoluteEmission").innerHTML = NAM2018 +"";
-        document.querySelector(".relativePercentage").innerHTML = (NAM2018/ALL2018)*100 +""
-        document.querySelector(".growthPercentage").innerHTML = NAM2018/NAM2008 +""
-        document.querySelector(".growthEmission").innerHTML = difnam +""
+        document.querySelector(".relativePercentage").innerHTML = na1.toFixed(2) +"%" +""
+        document.querySelector(".growthPercentage").innerHTML = na2.toFixed(2) +"%" +""
+        document.querySelector(".growthEmission").innerHTML = difnam.toFixed(2) +"kg" +""
         document.querySelector(".chart").setAttribute("style", "height:"+(NAM2018/ALL2018)*100 +"%")
         }
         
         window.addEventListener('load', function () {
-            document.querySelector(".northamerica").addEventListener('click', northamerica
-            );
+            document.querySelector(".northamerica").addEventListener('click', northamerica);
         })
 
-console.log("Die Emission von Afrika ist: "+ AFR2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Afrika damit "+ (AFR2018/ALL2018)*100, "%. Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um "+ NAM2018/NAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difafr, " kg CO2");
+function africa() {
+    console.log("Die Emission von Afrika ist:, "+ AFR2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Afrika damit, "+ (AFR2018/ALL2018)*100, "%. Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um "+ AFR2018/AFR2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difafr, " kg CO2");
+    document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Africa"
+    document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Africa in 2018";
+    document.querySelector(".absoluteEmission").innerHTML = AFR2018 +"";
+    document.querySelector(".relativePercentage").innerHTML = af1.toFixed(2) +"%" +""
+    document.querySelector(".growthPercentage").innerHTML = af2.toFixed(2) +"%" +""
+    document.querySelector(".growthEmission").innerHTML = difafr.toFixed(2) +"kg" +""
+    document.querySelector(".chart").setAttribute("style", "height:"+(AFR2018/ALL2018)*100 +"%")
+    }
+    
+    window.addEventListener('load', function () {
+        document.querySelector(".africa").addEventListener('click', africa);
+    })
 
-console.log("Die Emission von Asien ist: "+ ASI2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Asien damit "+ (ASI2018/ALL2018)*100, "%. Für Asien hat sich 2018 im Vergleich zu 2008 die Emission um "+ ASI2018/ASI2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difasi, " kg CO2");
+function asia() {
+    console.log("Die Emission von Asien ist:, "+ ASI2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Asien damit, "+ (ASI2018/ALL2018)*100, "%. Für Asien hat sich 2018 im Vergleich zu 2008 die Emission um "+ ASI2018/ASI2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difasi, " kg CO2");
+    document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Asia"
+    document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Asia in 2018";
+    document.querySelector(".absoluteEmission").innerHTML = ASI2018 +"";
+    document.querySelector(".relativePercentage").innerHTML = as1.toFixed(2) +"%" +""
+    document.querySelector(".growthPercentage").innerHTML = as2.toFixed(2) +"%" +""
+    document.querySelector(".growthEmission").innerHTML = difasi.toFixed(2) +"kg" +""
+    document.querySelector(".chart").setAttribute("style", "height:"+(ASI2018/ALL2018)*100 +"%")
+    }
+    
+    window.addEventListener('load', function () {
+        document.querySelector(".asia").addEventListener('click', asia);
+    })
 
-console.log("Die Emission von Australien ist: "+ AUS2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Australien damit "+ (AUS2018/ALL2018)*100, "%. Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um "+ AUS2018/AUS2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difaus, " kg CO2");
+    function australia() {
+        console.log("Die Emission von Australien ist:, "+ AUS2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Australien damit, "+ (AUS2018/ALL2018)*100, "%. Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um "+ AUS2018/AUS2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difaus, " kg CO2");
+        document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in Australia"
+        document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of Australia in 2018";
+        document.querySelector(".absoluteEmission").innerHTML = AUS2018 +"";
+        document.querySelector(".relativePercentage").innerHTML = au1.toFixed(2) +"%" +""
+        document.querySelector(".growthPercentage").innerHTML = au2.toFixed(2) +"%" +""
+        document.querySelector(".growthEmission").innerHTML = difaus.toFixed(2) +"kg" +""
+        document.querySelector(".chart").setAttribute("style", "height:"+(AUS2018/ALL2018)*100 +"%")
+        }
+        
+        window.addEventListener('load', function () {
+            document.querySelector(".australia").addEventListener('click', australia);
+        })
