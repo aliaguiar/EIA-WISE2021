@@ -1,3 +1,5 @@
+window.addEventListener("load",function(){
+
 var EUR2008:number= 4965.7;
 var EUR2018:number= 4209.3;
 
@@ -51,6 +53,7 @@ var au2:number=AUS2018/AUS2008;
 
 console.log("Die Emission weltweit ist: "+ ALL2018, " kg CO2")
 
+
 document.querySelector(".europe").addEventListener("click", function () 
 {dataOfCountries(eu, EUR2018, eu1.toFixed(2), eu2.toFixed(2), difeur.toFixed(2), (EUR2018/ALL2018)*100);
 })
@@ -81,9 +84,6 @@ function dataOfCountries (Countryname: string, absEm: number, relPer: string, gr
     document.querySelector(".chart").setAttribute("style", "height:" +chart +"%")
 }
 
-dataOfCountries(eu, EUR2018, eu1.toFixed(2), eu2.toFixed(2), difeur.toFixed(2), (EUR2018/ALL2018)*100);
-dataOfCountries(sa, SAM2018, sa1.toFixed(2), sa2.toFixed(2), difsam.toFixed(2), (SAM2018/ALL2018)*100);
-dataOfCountries(na, NAM2018, na1.toFixed(2), na2.toFixed(2), difnam.toFixed(2), (NAM2018/ALL2018)*100);
-dataOfCountries(af, AFR2018, af1.toFixed(2), af2.toFixed(2), difafr.toFixed(2), (AFR2018/ALL2018)*100);
-dataOfCountries(as, ASI2018, as1.toFixed(2), as2.toFixed(2), difasi.toFixed(2), (ASI2018/ALL2018)*100);
-dataOfCountries(au, AUS2018, au1.toFixed(2), au2.toFixed(2), difaus.toFixed(2), (AUS2018/ALL2018)*100);
+})
+
+
