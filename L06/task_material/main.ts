@@ -71,7 +71,7 @@ document.querySelector(".australia").addEventListener("click", function ()
 })
 
 function dataOfCountries (Countryname: string, absEm: number, relPer: string, groPer: string, groEm: string, chart: number): void{
-    console.log("Die Emission von Südamerika ist:, "+ SAM2018," kg CO2. Relativ zur Gesamtemission der Welt verursacht Südamerika damit, "+ (SAM2018/ALL2018)*100, "%. Für Südamerika hat sich 2018 im Vergleich zu 2008 die Emission um "+ SAM2018/SAM2008, "% verändert. 2018 im Vergleich zu 2008 sind das "+ difsam, " kg CO2");
+    console.log("Die Emission von " +Countryname, " ist:, "+ absEm," kg CO2. Relativ zur Gesamtemission der Welt verursacht " +Countryname, " damit, "+ relPer, "%. Für "+Countryname," hat sich 2018 im Vergleich zu 2008 die Emission um "+ groPer, "% verändert. 2018 im Vergleich zu 2008 sind das "+ groEm, " kg CO2");
     document.querySelector(".title").innerHTML = "Carbon Dioxide Emissions in " +Countryname;
     document.querySelector(".absoluteContinent").innerHTML = "Emission absolute of " + Countryname; "in 2018";
     document.querySelector(".absoluteEmission").innerHTML = absEm +"";
