@@ -17,40 +17,56 @@ body{
     position: absolute;
     height: 150px;
     width: 150px;
-    background-image: linear-gradient(#444fff, #000fff);
+    background-image: linear-gradient(#555fff, #000fff);
     border-radius: 10px;
     left:0px;
     top:0px;
+}
+
+.box1:hover{
+    background-image: linear-gradient(#000fff, #555fff);
 }
 
 .box2{
     position: absolute;
     height: 150px;
     width: 150px;
-    background-image: linear-gradient(#444fff, #000fff);
+    background-image: linear-gradient(#555fff, #000fff);
     border-radius: 10px;
     left:155px;
     top:0px;
+}
+
+.box2:hover{
+    background-image: linear-gradient(#000fff, #555fff);
 }
 
 .box3{
     position: absolute;
     height: 150px;
     width: 150px;
-    background-image: linear-gradient(#444fff, #000fff);
+    background-image: linear-gradient(#555fff, #000fff);
     border-radius: 10px;
     right:0px;
     top:0px;
+}
+
+.box3:hover{
+    background-image: linear-gradient(#000fff, #555fff);
 }
 
 .box4{
     position: absolute;
     height: 150px;
     width: 150px;
-    background-image: linear-gradient(#444fff, #000fff);
+    background-image: linear-gradient(#555fff, #000fff);
     border-radius: 10px;
     left:0px;
     top:155px;
+}
+
+.box4:hover{
+    background-image: linear-gradient(#000fff, #555fff);
 }
 
 .box5{
@@ -63,6 +79,10 @@ body{
     top:155px;
 }
 
+.box5:hover{
+    background-image: linear-gradient(#ff2244, #ff5088);
+}
+
 .box6{
     position: absolute;
     height: 150px;
@@ -71,6 +91,10 @@ body{
     border-radius: 10px;
     right:0px;
     top:155px;
+}
+
+.box6:hover{
+    background-image: linear-gradient(#ff2244, #ff5088);
 }
 
 .box7{
@@ -83,6 +107,10 @@ body{
     top:310px;
 }
 
+.box7:hover{
+    background-image: linear-gradient(#ff2244, #ff5088);
+}
+
 .box8{
     position: absolute;
     height: 150px;
@@ -93,6 +121,10 @@ body{
     top:310px;
 }
 
+.box8:hover{
+    background-image: linear-gradient(#f44f22, #f77f22);
+}
+
 .box9{
     position: absolute;
     height: 150px;
@@ -101,6 +133,10 @@ body{
     border-radius: 10px;
     right:0px;
     top:310px;
+}
+
+.box9:hover{
+    background-image: linear-gradient(#f44f22, #f77f22);
 }
 
 .playButton{

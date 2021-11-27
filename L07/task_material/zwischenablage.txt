@@ -1,0 +1,32 @@
+/Interval
+clearInterval(myVar);
+
+/BackgroundColorChange
+var colors: string[] = ["rgb(1,88,224)", "#ff0088", "yellow", "rgba(0,0,100,0.5)", "red", "#00ffff"]
+
+var key: number = 0;
+
+function colorchange(){
+document.querySelector("body").style.background = colors[key];
+key++;
+}
+
+window.addEventListener('load', function(){
+document.querySelector('#buttonA').addEventListener('click', colorchange);
+});
+
+Var nameFriends: string [] = ['Laila', 'Leticia', 'Ilayda'];
+
+/Intervalle?
+for (var i = 0 ; i < 10; i++) {
+console.log(i);
+setTimeout(function())
+}
+bei warten werden andere Funktionen blockiert
+for (var i = 0 ; i < arrayLength; i++) {
+
+}
+
+/SoundEinfuehrung
+var sound:HTMLAudioElement = new Audio('sample.mp3');
+sound.play();
