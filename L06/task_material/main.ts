@@ -85,5 +85,3 @@ function dataOfCountries (Countryname: string, absEm: number, relPer: string, gr
 }
 
 })
-
-

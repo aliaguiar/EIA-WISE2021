@@ -1,0 +1,25 @@
+body{
+    background-color: #111111;
+}
+
+.container{
+    position: absolute;
+    height: 460px;
+    width: 460px;
+    margin:0;
+    top: 50%;
+    left:50%;
+    margin-right:-50%;
+    transform: translate(-50%,-50%); 
+    background-color: aliceblue;
+}
+
+.box1{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: #000fff;
+    border-radius: 10px;
+    left:0px;
+    top:0px;
+}
