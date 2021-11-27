@@ -20,38 +20,38 @@ namespace L07{
         console.log("sound")
     }
     
-    document.querySelector(".box1").addEventListener('click', function(){playSample(sound1)});
-    document.querySelector(".box2").addEventListener('click', function(){playSample(sound2)});
-    document.querySelector(".box3").addEventListener('click', function(){playSample(sound3)});
-    document.querySelector(".box4").addEventListener('click', function(){playSample(sound4)});
-    document.querySelector(".box5").addEventListener('click', function(){playSample(sound5)});
-    document.querySelector(".box6").addEventListener('click', function(){playSample(sound6)});
-    document.querySelector(".box7").addEventListener('click', function(){playSample(sound7)});
-    document.querySelector(".box8").addEventListener('click', function(){playSample(sound8)});
-    document.querySelector(".box9").addEventListener('click', function(){playSample(sound9)});
+        document.querySelector(".box1").addEventListener('click', function(){playSample(sound1)});
+        document.querySelector(".box2").addEventListener('click', function(){playSample(sound2)});
+        document.querySelector(".box3").addEventListener('click', function(){playSample(sound3)});
+        document.querySelector(".box4").addEventListener('click', function(){playSample(sound4)});
+        document.querySelector(".box5").addEventListener('click', function(){playSample(sound5)});
+        document.querySelector(".box6").addEventListener('click', function(){playSample(sound6)});
+        document.querySelector(".box7").addEventListener('click', function(){playSample(sound7)});
+        document.querySelector(".box8").addEventListener('click', function(){playSample(sound8)});
+        document.querySelector(".box9").addEventListener('click', function(){playSample(sound9)});
 
 //Funktion 7.2
-function playBeat(): void{
-    setInterval(function() {
-        beat[0].play();
-    }, 500 );
+    function playBeat(): void{
+        setInterval(function() {
+            beat[0].play();
+        }, 500 );
 
-    setInterval(function() {
-        beat[1].play();
-    }, 1000 );
+        setInterval(function() {
+            beat[1].play();
+        }, 1000 );
 
-    setInterval(function() {
-        beat[2].play();
-    }, 1500 );
+        setInterval(function() {
+            beat[2].play();
+        }, 1500 );
 
-    setInterval(function() {
-        beat[3].play();
-    }, 2000 );
+        setInterval(function() {
+            beat[3].play();
+        }, 2000 );
 
-    setInterval(function() {
-        beat[0].play();
-    }, 2500 );
-}
+        setInterval(function() {
+            beat[0].play();
+        }, 2500 );
+    }
 
     document.querySelector(".playButton").addEventListener('click', function(){playBeat()});
 }
