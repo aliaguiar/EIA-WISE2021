@@ -1,16 +1,16 @@
 var L07;
 (function (L07) {
     //Sounds
-    var sound1 = new Audio("assets/A.mp3");
-    var sound2 = new Audio("assets/C.mp3");
-    var sound3 = new Audio("assets/F.mp3");
-    var sound4 = new Audio("assets/G.mp3");
-    var sound5 = new Audio("assets/hihat.mp3");
-    var sound6 = new Audio("assets/kick.mp3");
-    var sound7 = new Audio("assets/snare.mp3");
+    var sound1 = new Audio("assets/hihat.mp3");
+    var sound2 = new Audio("assets/kick.mp3");
+    var sound3 = new Audio("assets/snare.mp3");
+    var sound4 = new Audio("assets/A.mp3");
+    var sound5 = new Audio("assets/C.mp3");
+    var sound6 = new Audio("assets/F.mp3");
+    var sound7 = new Audio("assets/G.mp3");
     var sound8 = new Audio("assets/laugh-1.mp3");
     var sound9 = new Audio("assets/laugh-2.mp3");
-    var beat = [sound1, sound2, sound3, sound4];
+    var beat = [sound4, sound5, sound6, sound7];
     //Funktion 7.1
     function playSample(sound) {
         sound.play();
