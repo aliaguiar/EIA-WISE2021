@@ -55,4 +55,5 @@ namespace L07{
     }
 
     document.querySelector(".playButton").addEventListener('click', function(){playBeat()});
+
 }
