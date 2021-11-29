@@ -11,7 +11,7 @@ namespace L07{
     var sound8:HTMLAudioElement = new Audio ("assets/laugh-1.mp3");
     var sound9:HTMLAudioElement = new Audio ("assets/laugh-2.mp3")
 
-    var beat:HTMLAudioElement[]= [sound4, sound5, sound6, sound7]
+    var beat:HTMLAudioElement[]= [sound4, sound5, sound6, sound7, sound4]
     
 
 //Funktion 7.1
@@ -31,26 +31,12 @@ namespace L07{
         document.querySelector(".box9").addEventListener('click', function(){playSample(sound9)});
 
 //Funktion 7.2
+    var laufzahl: number = 0;
+
     function playBeat(): void{
         setInterval(function() {
-            beat[0].play();
+            beat[laufzahl++].play();
         }, 500 );
-
-        setInterval(function() {
-            beat[1].play();
-        }, 1000 );
-
-        setInterval(function() {
-            beat[2].play();
-        }, 1500 );
-
-        setInterval(function() {
-            beat[3].play();
-        }, 2000 );
-
-        setInterval(function() {
-            beat[0].play();
-        }, 2500 );
 
     }
 
