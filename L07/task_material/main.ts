@@ -38,6 +38,10 @@ namespace L07{
             beat[laufzahl++].play();
         }, 500 );
 
+        if (laufzahl>4){
+            playBeat
+        }
+
     }
 
     document.querySelector(".playButton").addEventListener('click', function(){playBeat()});

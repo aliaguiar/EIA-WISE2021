@@ -31,6 +31,9 @@ var L07;
         setInterval(function () {
             beat[laufzahl++].play();
         }, 500);
+        if (laufzahl > 4) {
+            playBeat;
+        }
     }
     document.querySelector(".playButton").addEventListener('click', function () { playBeat(); });
 })(L07 || (L07 = {}));

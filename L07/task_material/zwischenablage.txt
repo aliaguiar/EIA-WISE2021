@@ -30,3 +30,27 @@ for (var i = 0 ; i < arrayLength; i++) {
 /SoundEinfuehrung
 var sound:HTMLAudioElement = new Audio('sample.mp3');
 sound.play();
+
+/Beat+func
+function playBeat(): void{
+        setInterval(function() {
+            beat[0].play();
+        }, 0 );
+
+        setInterval(function() {
+            beat[1].play();
+        }, 500 );
+
+        setInterval(function() {
+            beat[2].play();
+        }, 1000 );
+
+        setInterval(function() {
+            beat[3].play();
+        }, 1500 );
+
+        setInterval(function() {
+            beat[4].play();
+        }, 2000 );
+
+//
