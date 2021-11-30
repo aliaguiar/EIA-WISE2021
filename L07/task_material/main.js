@@ -16,24 +16,24 @@ var L07;
         sound.play();
         console.log("sound");
     }
-    document.querySelector(".box1").addEventListener('click', function () { playSample(sound1); });
-    document.querySelector(".box2").addEventListener('click', function () { playSample(sound2); });
-    document.querySelector(".box3").addEventListener('click', function () { playSample(sound3); });
-    document.querySelector(".box4").addEventListener('click', function () { playSample(sound4); });
-    document.querySelector(".box5").addEventListener('click', function () { playSample(sound5); });
-    document.querySelector(".box6").addEventListener('click', function () { playSample(sound6); });
-    document.querySelector(".box7").addEventListener('click', function () { playSample(sound7); });
-    document.querySelector(".box8").addEventListener('click', function () { playSample(sound8); });
-    document.querySelector(".box9").addEventListener('click', function () { playSample(sound9); });
+    document.querySelector("#box1").addEventListener('click', function () { playSample(sound1); });
+    document.querySelector("#box2").addEventListener('click', function () { playSample(sound2); });
+    document.querySelector("#box3").addEventListener('click', function () { playSample(sound3); });
+    document.querySelector("#box4").addEventListener('click', function () { playSample(sound4); });
+    document.querySelector("#box5").addEventListener('click', function () { playSample(sound5); });
+    document.querySelector("#box6").addEventListener('click', function () { playSample(sound6); });
+    document.querySelector("#box7").addEventListener('click', function () { playSample(sound7); });
+    document.querySelector("#box8").addEventListener('click', function () { playSample(sound8); });
+    document.querySelector("#box9").addEventListener('click', function () { playSample(sound9); });
     //Funktion 7.2
     var laufzahl = 0;
     function playBeat() {
         setInterval(function () {
             beat[laufzahl++].play();
+            if (laufzahl == 4) {
+                laufzahl = 0;
+            }
         }, 500);
-        if (laufzahl > 4) {
-            playBeat;
-        }
     }
     document.querySelector(".playButton").addEventListener('click', function () { playBeat(); });
 })(L07 || (L07 = {}));
