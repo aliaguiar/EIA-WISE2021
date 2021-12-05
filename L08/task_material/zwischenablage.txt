@@ -64,7 +64,7 @@ Als letzten Schritt müssen Sie für den Linter in VSC die TSLint Extension inst
 
 3)Der Play-Button soll erweitert werden: bei Klick auf Play, soll sich der Button zu einem Stop-Button verwandeln. Bei Klick auf Stop soll wieder der Play-Button in Funktion und Darstellung abgebildet sein.
 
-4)Folgende Anforderung für Ihre Code-Struktur: (a) das Abspielen eines Samples soll von einer zentralen Funktion ausgeführt werden. In Ihrem Code darf also nur einmal die Anweisung .play() auftrauchen. (b) Für das Abspielen, Aufnehmen und Löschen eines Beats soll nur ein Array manipuliert werden.
+4)Folgende Anforderung für Ihre Code-Struktur: (a) das Abspielen eines Samples soll von einer zentralen Funktion ausgeführt werden. In Ihrem Code darf also nur einmal die Anweisung .play() auftauchen. (b) Für das Abspielen, Aufnehmen und Löschen eines Beats soll nur ein Array manipuliert werden.
 
 5)Eine visuelle Anforderung: für die Darstellung der Buttons (Play/Stop, Delete) sollen keine Grafiken eingesetzt werden, stattdessen werden Sie die Icons aus einer Icon-Font einbinden. Sehen Sie sich dazu das Beispiel example-icon-fonts.html an und übertragen Sie die entsprechenden Fragemente in Ihre Anwendung.
 
@@ -75,7 +75,3 @@ Math.random() // erzeugt eine (quasi) Zufallszahl
 Math.round() // eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
 
 7)Ein Delete-Button soll den aktuell definierten Beat löschen / leeren.
-
-(Optionale Zusatzaufgabe (wenn Grundaufgabe erfüllt wurde, dann gibt es dafür ein Sternchen))
-
-Ein Record-Button soll ermöglichen, das man einen Beat aufnimmt. Sobald der Record-Button geklickt wurde, soll folgende Aktion bei Klick eines Pads ausgeführt werden: der entsprechende Sound des Pads wird abgespielt (wie gehabt) plus das entsprechende Sample wird in den Beat-Loop aufgenommen. D.h. wenn später der Play-Button geklickt wird, dann soll der neu definierte Beat abspielen.

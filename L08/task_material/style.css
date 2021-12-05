@@ -137,11 +137,43 @@ body{
     background-image: linear-gradient(#f44f22, #f77f22);
 }
 
-.playButton{
+#play{
     position: absolute;
     margin:0;
     top:537.5px;
     left:50%;
+    transform: translate(-50%,-50%); 
+    color: #cccccc;
+    font-size: 100px;
+}
+
+#pause{
+    position: absolute;
+    margin:0;
+    top:537.5px;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    color: #cccccc;
+    font-size: 100px;
+}
+
+#delete{
+    position: absolute;
+    margin:0;
+    top:537.5px;
+    left: 75px;
+    color: #cccccc;
+    font-size: 100px;
+    transform: translate(-50%,-50%); 
+}
+
+#shuffle{
+    position: absolute;
+    margin:0;
+    top:537.5px;
+    right:-20px;
+    color: #cccccc;
+    font-size: 100px;
     transform: translate(-50%,-50%); 
 }
 
