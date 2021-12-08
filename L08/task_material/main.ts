@@ -1,5 +1,3 @@
-namespace L08 {
-
 //Sounds
     var sound1: HTMLAudioElement = new Audio ("assets/hihat.mp3");
     var sound2: HTMLAudioElement = new Audio ("assets/kick.mp3");
@@ -34,27 +32,11 @@ namespace L08 {
     document.querySelector("#box7").addEventListener("mousedown", function(): void {playSample(sound7); });
     document.querySelector("#box8").addEventListener("mousedown", function(): void {playSample(sound8); });
     document.querySelector("#box9").addEventListener("mousedown", function(): void {playSample(sound9); });
-    document.querySelector(".fas fa-play").addEventListener("click", function(): void {playwithpause(); });
 
 
-//Funktion 7.2 Beat
+//Intervall (Aufgabe 7.2)
     var laufzahl: number = 0;
 
-    document.querySelector(".fas fa-play").addEventListener("click", function(): void {playBeat(); });
-
-
-//Funktion 8.3 Play/Pause
-    function playwithpause(): void {
-        if (document.querySelector("#play").getAttribute("class") == "fas fa-play") {
-            document.querySelector("#play").setAttribute("class", "fas fa-pause");
-            poof = setInterval(playBeat, 500);
-            console.log("click");
-            
-            }
-            else {document.querySelector("#play").setAttribute("class", "fas fa-play");
-                  clearInterval(poof); }
-}
-//Intervall (Aufgabe 7.3)
     function playBeat(): void {
     setInterval(function(): void {
         beat[laufzahl++].play();
@@ -64,6 +46,19 @@ namespace L08 {
     },          500 );
 }
 
+//Funktion 8.3 Play/Pause
+    function playwithpause(): void {
+    if (document.querySelector("#play").getAttribute("class") == "fas fa-play") {
+        document.querySelector("#play").setAttribute("class", "fas fa-pause");
+        poof = setInterval(playBeat, 500);
+        console.log("click");
+        
+        }
+        else {document.querySelector("#play").setAttribute("class", "fas fa-play");
+              clearInterval(poof);
+              console.log("auch Klick"); }
+}
+
 //Funktion 8.6 Remix
     function randomsounds(): void {
        num  = setInterval(remix, 500);
@@ -71,8 +66,7 @@ namespace L08 {
 
     function remix(): void {
     for (var i: number = 0; i <= beat.length; i++) {
-        var j: number = (Math.floor(Math.random) * 9);
-        playSample(sounds[j]);
+        
     }}
 
 
@@ -81,4 +75,6 @@ namespace L08 {
     beat.length = 0;
   }
 
-}
+
+//Extra knöpfe
+    document.querySelector(".fas fa-play").addEventListener("click", function(): void {playwithpause(); });
