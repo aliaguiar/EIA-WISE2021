@@ -130,3 +130,11 @@ function playSample () {
 //doc quer sel ran
 
     document.querySelector(".fas fa-random").addEventListener("click", function(): void {randomsounds(); });
+
+    //pausebutton
+    
+        <a id=pause class="fas fa-pause"></a>
+
+//ehemalige 7.2
+
+document.querySelector(".fas fa-play").addEventListener("click", function(): void {playBeat(); });

@@ -1,8 +1,6 @@
 //Sounds
 var sounds = [new Audio("assets/hihat.mp3"), new Audio("assets/kick.mp3"), new Audio("assets/snare.mp3"), new Audio("assets/A.mp3"), new Audio("assets/C.mp3"), new Audio("assets/F.mp3"), new Audio("assets/G.mp3"), new Audio("assets/laugh-1.mp3"), new Audio("assets/laugh-2.mp3")];
 var beat = [sounds[1], sounds[1], sounds[2]];
-var poof;
-var num;
 //Funktion 7.1 Button
 function playSample(sound) {
     sound.play();
@@ -28,20 +26,25 @@ function playBeat() {
     }, 500);
 }
 //Funktion 8.3 Play/Pause
-// tslint:disable-next-line: typedef
+var playing;
+var poof;
 function playwithpause() {
     if (document.querySelector("#play").getAttribute("class") == "fas fa-play") {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         poof = setInterval(playBeat, 500);
         console.log("click");
+        playing = true;
     }
     else {
         document.querySelector("#play").setAttribute("class", "fas fa-play");
         clearInterval(poof);
+        playing = false;
+        deleteBeat();
         console.log("auch Klick");
     }
 }
 //Funktion 8.6 Remix
+var num;
 function randomsounds() {
     num = setInterval(remix, 500);
 }
@@ -51,13 +54,21 @@ function remix() {
         for (var i = 0; i <= beat.length; i++) {
             const random = Math.floor(Math.random() * 5);
             playSample(sounds[random]);
+            playing = true;
         }
     }
 }
 //Funktion 8.7 Löschen
+var zero = 0;
+var cero = 0;
 function deleteBeat() {
     beat.length = 0;
+    beat.length = 3;
+    sounds.length = 0;
+    sounds.length = 9;
 }
 //Extra knöpfe
-document.querySelector(".fas fa-play").addEventListener("click", function () { playwithpause(); });
+document.querySelector(".fa-play").addEventListener("click", function () { playwithpause(); });
+document.querySelector(".fa-trash-alt").addEventListener("click", function () { deleteBeat(); });
+document.querySelector(".fa-random").addEventListener("click", function () { randomsounds(); });
 //# sourceMappingURL=main.js.map
