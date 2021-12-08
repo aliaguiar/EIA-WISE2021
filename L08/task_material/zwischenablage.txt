@@ -122,3 +122,11 @@ function playSample () {
     }
 
 }
+
+//doc quer sel del
+
+    document.querySelector(".fas fa-trash-alt").addEventListener("click", function(): void {deleteBeat(); });
+
+//doc quer sel ran
+
+    document.querySelector(".fas fa-random").addEventListener("click", function(): void {randomsounds(); });

@@ -147,7 +147,7 @@ body{
     font-size: 100px;
 }
 
-#pause{
+/*#pause{
     position: absolute;
     margin:0;
     top:537.5px;
@@ -155,7 +155,7 @@ body{
     transform: translate(-50%,-50%); 
     color: #cccccc;
     font-size: 100px;
-}
+}*/
 
 #delete{
     position: absolute;
