@@ -1,15 +1,6 @@
 //Sounds
-var sound1 = new Audio("assets/hihat.mp3");
-var sound2 = new Audio("assets/kick.mp3");
-var sound3 = new Audio("assets/snare.mp3");
-var sound4 = new Audio("assets/A.mp3");
-var sound5 = new Audio("assets/C.mp3");
-var sound6 = new Audio("assets/F.mp3");
-var sound7 = new Audio("assets/G.mp3");
-var sound8 = new Audio("assets/laugh-1.mp3");
-var sound9 = new Audio("assets/laugh-2.mp3");
-var sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/A.mp3", "assets/C.mp3", "assets/F.mp3", "assets/G.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3"];
-var beat = [sound2, sound2, sound3];
+var sounds = [new Audio("assets/hihat.mp3"), new Audio("assets/kick.mp3"), new Audio("assets/snare.mp3"), new Audio("assets/A.mp3"), new Audio("assets/C.mp3"), new Audio("assets/F.mp3"), new Audio("assets/G.mp3"), new Audio("assets/laugh-1.mp3"), new Audio("assets/laugh-2.mp3")];
+var beat = [sounds[1], sounds[1], sounds[2]];
 var poof;
 var num;
 //Funktion 7.1 Button
@@ -17,15 +8,15 @@ function playSample(sound) {
     sound.play();
     console.log("sound");
 }
-document.querySelector("#box1").addEventListener("mousedown", function () { playSample(sound1); });
-document.querySelector("#box2").addEventListener("mousedown", function () { playSample(sound2); });
-document.querySelector("#box3").addEventListener("mousedown", function () { playSample(sound3); });
-document.querySelector("#box4").addEventListener("mousedown", function () { playSample(sound4); });
-document.querySelector("#box5").addEventListener("mousedown", function () { playSample(sound5); });
-document.querySelector("#box6").addEventListener("mousedown", function () { playSample(sound6); });
-document.querySelector("#box7").addEventListener("mousedown", function () { playSample(sound7); });
-document.querySelector("#box8").addEventListener("mousedown", function () { playSample(sound8); });
-document.querySelector("#box9").addEventListener("mousedown", function () { playSample(sound9); });
+document.querySelector("#box1").addEventListener("mousedown", function () { playSample(sounds[0]); });
+document.querySelector("#box2").addEventListener("mousedown", function () { playSample(sounds[1]); });
+document.querySelector("#box3").addEventListener("mousedown", function () { playSample(sounds[2]); });
+document.querySelector("#box4").addEventListener("mousedown", function () { playSample(sounds[3]); });
+document.querySelector("#box5").addEventListener("mousedown", function () { playSample(sounds[4]); });
+document.querySelector("#box6").addEventListener("mousedown", function () { playSample(sounds[5]); });
+document.querySelector("#box7").addEventListener("mousedown", function () { playSample(sounds[6]); });
+document.querySelector("#box8").addEventListener("mousedown", function () { playSample(sounds[7]); });
+document.querySelector("#box9").addEventListener("mousedown", function () { playSample(sounds[8]); });
 //Intervall (Aufgabe 7.2)
 var laufzahl = 0;
 function playBeat() {
@@ -37,6 +28,7 @@ function playBeat() {
     }, 500);
 }
 //Funktion 8.3 Play/Pause
+// tslint:disable-next-line: typedef
 function playwithpause() {
     if (document.querySelector("#play").getAttribute("class") == "fas fa-play") {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
@@ -54,7 +46,12 @@ function randomsounds() {
     num = setInterval(remix, 500);
 }
 function remix() {
-    for (var i = 0; i <= beat.length; i++) {
+    num = setInterval(startremix, 500);
+    function startremix() {
+        for (var i = 0; i <= beat.length; i++) {
+            const random = Math.floor(Math.random() * 5);
+            playSample(sounds[random]);
+        }
     }
 }
 //Funktion 8.7 Löschen

@@ -1,17 +1,8 @@
 //Sounds
-    var sound1: HTMLAudioElement = new Audio ("assets/hihat.mp3");
-    var sound2: HTMLAudioElement = new Audio ("assets/kick.mp3");
-    var sound3: HTMLAudioElement = new Audio ("assets/snare.mp3");
-    var sound4: HTMLAudioElement = new Audio ("assets/A.mp3");
-    var sound5: HTMLAudioElement = new Audio ("assets/C.mp3");
-    var sound6: HTMLAudioElement = new Audio ("assets/F.mp3");
-    var sound7: HTMLAudioElement = new Audio ("assets/G.mp3");
-    var sound8: HTMLAudioElement = new Audio ("assets/laugh-1.mp3");
-    var sound9: HTMLAudioElement = new Audio ("assets/laugh-2.mp3");
+ 
 
-
-    var sounds: string [] = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/A.mp3", "assets/C.mp3", "assets/F.mp3", "assets/G.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3"];
-    var beat: HTMLAudioElement[] = [sound2, sound2, sound3];
+    var sounds: HTMLAudioElement [] = [new Audio ("assets/hihat.mp3"), new Audio ("assets/kick.mp3"), new Audio ("assets/snare.mp3"), new Audio ("assets/A.mp3"), new Audio ("assets/C.mp3"), new Audio ("assets/F.mp3"), new Audio ("assets/G.mp3"), new Audio ("assets/laugh-1.mp3"), new Audio ("assets/laugh-2.mp3")];
+    var beat: HTMLAudioElement[] = [sounds[1], sounds[1], sounds[2]];
     var poof: number;
     
     var num: number;
@@ -23,15 +14,15 @@
     }
     
 
-    document.querySelector("#box1").addEventListener("mousedown", function(): void {playSample(sound1); });
-    document.querySelector("#box2").addEventListener("mousedown", function(): void {playSample(sound2); });
-    document.querySelector("#box3").addEventListener("mousedown", function(): void {playSample(sound3); });
-    document.querySelector("#box4").addEventListener("mousedown", function(): void {playSample(sound4); });
-    document.querySelector("#box5").addEventListener("mousedown", function(): void {playSample(sound5); });
-    document.querySelector("#box6").addEventListener("mousedown", function(): void {playSample(sound6); });
-    document.querySelector("#box7").addEventListener("mousedown", function(): void {playSample(sound7); });
-    document.querySelector("#box8").addEventListener("mousedown", function(): void {playSample(sound8); });
-    document.querySelector("#box9").addEventListener("mousedown", function(): void {playSample(sound9); });
+    document.querySelector("#box1").addEventListener("mousedown", function(): void {playSample(sounds[0]); });
+    document.querySelector("#box2").addEventListener("mousedown", function(): void {playSample(sounds[1]); });
+    document.querySelector("#box3").addEventListener("mousedown", function(): void {playSample(sounds[2]); });
+    document.querySelector("#box4").addEventListener("mousedown", function(): void {playSample(sounds[3]); });
+    document.querySelector("#box5").addEventListener("mousedown", function(): void {playSample(sounds[4]); });
+    document.querySelector("#box6").addEventListener("mousedown", function(): void {playSample(sounds[5]); });
+    document.querySelector("#box7").addEventListener("mousedown", function(): void {playSample(sounds[6]); });
+    document.querySelector("#box8").addEventListener("mousedown", function(): void {playSample(sounds[7]); });
+    document.querySelector("#box9").addEventListener("mousedown", function(): void {playSample(sounds[8]); });
 
 
 //Intervall (Aufgabe 7.2)
@@ -47,7 +38,9 @@
 }
 
 //Funktion 8.3 Play/Pause
-    function playwithpause(): void {
+
+    // tslint:disable-next-line: typedef
+    function playwithpause() {
     if (document.querySelector("#play").getAttribute("class") == "fas fa-play") {
         document.querySelector("#play").setAttribute("class", "fas fa-pause");
         poof = setInterval(playBeat, 500);
@@ -65,7 +58,12 @@
     }
 
     function remix(): void {
-    for (var i: number = 0; i <= beat.length; i++) {
+        num = setInterval(startremix, 500);
+        function startremix(): void {
+            for (var i: number = 0; i <= beat.length; i++) {
+        const random: number = Math.floor(Math.random() * 5);
+        playSample (sounds[random]);
+    }
         
     }}
 
