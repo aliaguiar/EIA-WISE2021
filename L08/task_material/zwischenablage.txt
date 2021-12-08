@@ -75,3 +75,50 @@ Math.random() // erzeugt eine (quasi) Zufallszahl
 Math.round() // eine einfache Art um eine Gleitkommazahl zu einer Ganzzahl zu runden
 
 7)Ein Delete-Button soll den aktuell definierten Beat löschen / leeren.
+
+
+//Vorlage
+let außerhalbIndex = 0;
+
+let beatArray = ["beat1.mp3", "beat2.mp3"]
+
+
+let meinIntervall;
+
+document.querySelector("#playButton").addEventListener("click", function() {
+starteIntervall();
+});
+
+document.querySelector("#stopButton").addEventListener("click", function() {
+    stoppeIntervall();
+});
+
+function stoppeIntervall () {
+   // stoppt den Intervall der aktuell läuft
+   // clearIntervall
+    meinIntervall.clearInterval()
+   // außerhalbIndex = 2;
+   außerhalbIndex = 0;
+}
+
+function starteIntervall () {
+    meinIntervall = setInterval(() => {
+        playSample();
+    }, 500);
+}
+
+
+
+
+function playSample () {
+
+    console.log(beatArray[außerhalbIndex].play());
+
+    // wird immer 1 erhöhen
+    außerhalbIndex++;    
+
+    if (beatArray.length == außerhalbIndex) {
+        außerhalbIndex = 0;
+    }
+
+}
