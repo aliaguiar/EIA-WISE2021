@@ -43,10 +43,10 @@ body{
     background-color: #eeeeee;
 }
 
-.addtaskbutton{
-    position: absolute;
-    right: 15px;
-    margin-top: 9px;
+#addtaskbutton{
+    position: relative;
+    bottom:33px;
+    right:-710px;
     color: #aec7c1;
 }
 
