@@ -74,5 +74,12 @@ body{
     position: relative;
     bottom:33px;
     left:-710px;
-    color: #000000;
+    color: #aec7c1;
+}
+
+.fa-trash{
+    position: relative;
+    bottom:33px;
+    left:-700px;
+    color: #aec7c1;
 }
