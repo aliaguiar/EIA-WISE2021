@@ -1,29 +1,31 @@
 namespace L09 {
 
 //Variablen
-const attachedtasks: HTMLElement = document.getElementById("attachedtasks");
-const p: HTMLParagraphElement = document.createElement("p");
+let tasks: HTMLElement = document.getElementById("tasks");
 let input: HTMLInputElement = document.querySelector("#input");
-let eingabefeldtext: HTMLElement = document.createElement("p");
-const listdiv: HTMLDivElement = document.createElement("div");
+let listdiv: HTMLDivElement = document.createElement("div");
 let counter: number = 0;
+listdiv.textContent = "";
 
 //Kindelement appenden
-attachedtasks.appendChild(listdiv);
+tasks.appendChild(listdiv);
 
 //Buttondruck
 document.querySelector("#addtaskbutton").addEventListener("click", newtask);
 
 //neues <p> Element in HTML hinzufügen
 function newtask(): void {
-    //counter jeweils updaten
+        //counter jeweils updaten
     counter ++;
     document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-    //Text eingegeben
+        //Text eingegeben
+    let eingabefeldtext: HTMLElement = document.createElement("p");
     console.log("something");
-    p.textContent = input.value;
-        //div machen
-    attachedtasks?.appendChild(p);
+    eingabefeldtext.innerHTML = input.value;
+    eingabefeldtext.className = "eingabefeldtext";
+    input.value = "";
+        //lokal deklarieren
+    let listdiv: HTMLDivElement = document.createElement("div");
         //Text in div appenden
     listdiv.appendChild(eingabefeldtext);
         //haeckchen appenden

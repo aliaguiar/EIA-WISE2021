@@ -42,6 +42,7 @@ var Todo;
 
 
 
+//old code
 //neues <p> Element in HTML hinzufügen
 function newtask(): void {
     console.log("something");

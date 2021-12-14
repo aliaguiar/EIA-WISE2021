@@ -1,14 +1,13 @@
 var L09;
 (function (L09) {
     //Variablen
-    const attachedtasks = document.getElementById("attachedtasks");
-    const p = document.createElement("p");
+    let tasks = document.getElementById("tasks");
     let input = document.querySelector("#input");
-    let eingabefeldtext = document.createElement("p");
-    const listdiv = document.createElement("div");
+    let listdiv = document.createElement("div");
     let counter = 0;
+    listdiv.textContent = "";
     //Kindelement appenden
-    attachedtasks.appendChild(listdiv);
+    tasks.appendChild(listdiv);
     //Buttondruck
     document.querySelector("#addtaskbutton").addEventListener("click", newtask);
     //neues <p> Element in HTML hinzufügen
@@ -17,10 +16,13 @@ var L09;
         counter++;
         document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
         //Text eingegeben
+        let eingabefeldtext = document.createElement("p");
         console.log("something");
-        p.textContent = input.value;
-        //div machen
-        attachedtasks?.appendChild(p);
+        eingabefeldtext.innerHTML = input.value;
+        eingabefeldtext.className = "eingabefeldtext";
+        input.value = "";
+        //lokal deklarieren
+        let listdiv = document.createElement("div");
         //Text in div appenden
         listdiv.appendChild(eingabefeldtext);
         //haeckchen appenden
