@@ -39,3 +39,24 @@ var Todo;
         }
     }
 })(Todo || (Todo = {}));
+
+
+
+//neues <p> Element in HTML hinzufügen
+function newtask(): void {
+    console.log("something");
+    p.textContent = input.value;
+    attachedtasks.appendChild(p);
+    counter ++;
+}
+//Eingabefeld-text für newtask
+function newtext(): void {
+    if (input.value != "") eingabefeldtext = input.value;
+    input.value = "";
+}
+//newtask in div "attachedtasks" einfügen
+p.addEventListener("click", complete);
+attachedtasks?.appendChild(p);
+function complete(): void {
+        console.log("anything");
+    }
