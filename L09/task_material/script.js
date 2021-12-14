@@ -28,31 +28,31 @@ var L09;
         listdiv.appendChild(eingabefeldtext);
         //
         tasks?.appendChild(listdiv);
-    }
-    //haeckchen hinzufügen
-    let check = document.createElement("div");
-    check.className = "far fa-check-square";
-    //Haken gehört div zu
-    listdiv?.appendChild(check);
-    //Funktion checking off/on
-    function checkingoff() {
-        if (check.getAttribute("class") == "far fa-check-square") {
-            check.setAttribute("class", "far fa-square");
+        //haeckchen hinzufügen
+        let check = document.createElement("div");
+        check.className = "far fa-check-square";
+        //Haken gehört div zu
+        listdiv?.appendChild(check);
+        //Funktion checking off/on
+        function checkingoff() {
+            if (check.getAttribute("class") == "far fa-check-square") {
+                check.setAttribute("class", "far fa-square");
+            }
+            else {
+                check.setAttribute("class", "far fa-check-square");
+            }
         }
-        else {
-            check.setAttribute("class", "far fa-check-square");
+        //Hakenclick
+        check.addEventListener("click", checkingoff);
+        //trash hinzufügen
+        let trash = document.createElement("div");
+        trash.className = "fas fa-trash";
+        //funktion zum löschen
+        function deleter() {
+            listdiv.parentElement.removeChild(listdiv);
+            counter--;
+            document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
         }
-    }
-    //Hakenclick
-    check.addEventListener("click", checkingoff);
-    //trash hinzufügen
-    let trash = document.createElement("div");
-    trash.className = "fas fa-trash";
-    //funktion zum löschen
-    function deleter() {
-        listdiv.parentElement.removeChild(listdiv);
-        counter--;
-        document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
     }
 })(L09 || (L09 = {}));
 //# sourceMappingURL=script.js.map

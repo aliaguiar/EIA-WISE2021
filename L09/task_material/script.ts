@@ -32,32 +32,30 @@ function newtask(): void {
     listdiv.appendChild(eingabefeldtext);
         //
     tasks?.appendChild(listdiv);
-}
 
-
-    //haeckchen hinzufügen
-let check: HTMLElement = document.createElement("div");
-check.className = "far fa-check-square";
-    //Haken gehört div zu
-listdiv?.appendChild(check);
-    //Funktion checking off/on
-function checkingoff(): void {
+        //haeckchen hinzufügen
+    let check: HTMLElement = document.createElement("div");
+    check.className = "far fa-check-square";
+        //Haken gehört div zu
+    listdiv?.appendChild(check);
+        //Funktion checking off/on
+    function checkingoff(): void {
     if (check.getAttribute("class") == "far fa-check-square") {
         check.setAttribute("class", "far fa-square"); }
     else {
         check.setAttribute("class", "far fa-check-square"); }
 } 
-    //Hakenclick
-check.addEventListener("click", checkingoff);
+        //Hakenclick
+    check.addEventListener("click", checkingoff);
 
-
-    //trash hinzufügen
-let trash: HTMLElement = document.createElement("div");
-trash.className = "fas fa-trash";
-    //funktion zum löschen
-function deleter(): void {
+        //trash hinzufügen
+    let trash: HTMLElement = document.createElement("div");
+    trash.className = "fas fa-trash";
+        //funktion zum löschen
+    function deleter(): void {
     listdiv.parentElement.removeChild(listdiv);
     counter--; 
     document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-}
+}  }
+
 }
