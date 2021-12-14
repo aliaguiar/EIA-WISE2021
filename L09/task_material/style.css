@@ -50,7 +50,7 @@ body{
     color: #aec7c1;
 }
 
-p{
+.eingabefeldtext{
     font-family: sans-serif;
     font-size: 20px;
     color: #585858;
@@ -63,8 +63,16 @@ p{
     background-color: #eeeeee;
 }
 
-.eingabefeldtext{
-    position: absolute;
-    color: #aaffaa;
-    font-family: 'Times New Roman', Times, serif;
+.fa-square{
+    position: relative;
+    bottom:33px;
+    left:-710px;
+    color: #aec7c1;
+}
+
+.fa-check-square{
+    position: relative;
+    bottom:33px;
+    left:-710px;
+    color: #000000;
 }
