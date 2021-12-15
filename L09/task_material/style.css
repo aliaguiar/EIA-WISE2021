@@ -64,32 +64,6 @@ body{
     list-style-type: none;
 }
 
-/*
-.fas fa-square{
-    position: relative;
-    bottom:0px;
-    left:-710px;
-    color: #aec7c1;
-    font-size: 20px;
-}
-
-.fas fa-check-square{
-    position: absolute;
-    bottom:0px;
-    left:-710px;
-    color: #aec7c1;
-    font-size: 20px;
-}
-
-.fas fa-trash{
-    position: absolute;
-    bottom:0px;
-    left:-700px;
-    color: #aec7c1;
-    font-size: 20px;
-}
-*/
-
 .fa-check-square {
     pointer-events: all;
     position: relative;
@@ -98,6 +72,7 @@ body{
     font-size: 20px;
     color: #aec7c1;
 }
+
 .fa-check-square:hover {
     pointer-events: all;
     position: relative;
@@ -108,6 +83,7 @@ body{
     opacity: 30%;
     cursor: pointer;
 }
+
 .fa-square {
     font-size: 20px;
     position: relative;
@@ -119,11 +95,13 @@ body{
 
 .fa-square:hover {
     opacity:30%;
+    cursor: pointer;
 }
 
 .fa-trash:active {
     color: #aec7c1;
 }
+
 .fa-trash {
     opacity: 100%;
     pointer-events: all;
@@ -133,6 +111,7 @@ body{
     font-size: 20px;
     color: #aec7c1;
 }
+
 .fa-trash:hover {
     opacity: 30%;
     cursor: pointer;
