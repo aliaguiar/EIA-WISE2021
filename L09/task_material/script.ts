@@ -37,7 +37,7 @@ tasks.appendChild(listdiv);
 
         //haeckchen hinzufügen
 let check: HTMLElement = document.createElement("div");
-check.className = "far fa-check-square";
+check.className = "far fa-square";
         //Haken gehört div zu
 listdiv?.appendChild(check);
         //Hakenclick
