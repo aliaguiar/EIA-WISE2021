@@ -64,26 +64,77 @@ body{
     list-style-type: none;
 }
 
-.fa-square{
+/*
+.fas fa-square{
     position: relative;
-    bottom:33px;
+    bottom:0px;
     left:-710px;
     color: #aec7c1;
     font-size: 20px;
 }
 
-.fa-check-square{
-    position: relative;
-    bottom:33px;
+.fas fa-check-square{
+    position: absolute;
+    bottom:0px;
     left:-710px;
     color: #aec7c1;
     font-size: 20px;
 }
 
-.fa-trash{
-    position: relative;
-    bottom:33px;
+.fas fa-trash{
+    position: absolute;
+    bottom:0px;
     left:-700px;
     color: #aec7c1;
     font-size: 20px;
+}
+*/
+
+.fa-check-square {
+    pointer-events: all;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    font-size: 20px;
+    color: #aec7c1;
+}
+.fa-check-square:hover {
+    pointer-events: all;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    font-size: 20px;
+    color: #aec7c1;
+    opacity: 30%;
+    cursor: pointer;
+}
+.fa-square {
+    font-size: 20px;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    color: #aec7c1;
+    opacity: 100%;
+}
+
+.fa-square:hover {
+    opacity:30%;
+}
+
+.fa-trash:active {
+    color: #aec7c1;
+}
+.fa-trash {
+    opacity: 100%;
+    pointer-events: all;
+    position: relative;
+    margin-left: 705px;
+    bottom: 75px;
+    font-size: 20px;
+    color: #aec7c1;
+}
+.fa-trash:hover {
+    opacity: 30%;
+    cursor: pointer;
+    color: #aec7c1;
 }

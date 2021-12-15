@@ -8,41 +8,11 @@ let listdiv: HTMLDivElement = document.createElement("div");
 let counter: number = 0;
 listdiv.textContent = "";
 
+/*document.addEventListener("keydown", function (event: KeyboardEvent): void { if (event.keyCode === 13) { if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; }
+                 else {alert("Add a new task first!"); }}});
+                 */
 
-  //Kindelement appenden
-tasks.appendChild(listdiv);
-
-        //haeckchen hinzufügen
-let check: HTMLElement = document.createElement("div");
-check.className = "far fa-check-square";
-let index: number;
-        //Haken gehört div zu
-listdiv?.appendChild(check);
-        //Hakenclick
-check.addEventListener("click", checkingoff);
-        //Funktion checking off/on
-function checkingoff(): void {
-            if (check.getAttribute("class") == "far fa-check-square") {
-                check.setAttribute("class", "far fa-square"); }
-            else {
-                check.setAttribute("class", "far fa-check-square"); }
-        }
-        
-        
-        //trash hinzufügen
-let trash: HTMLElement = document.createElement("div");
-trash.className = "fas fa-trash";
-        //trash gehört div zu
-listdiv?.appendChild(trash);
-        //Trashklick
-trash.addEventListener("click", deleter);
-        //funktion zum löschen
-function deleter(): void {
-            listdiv.parentElement.removeChild(listdiv);
-            counter--; 
-            document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-        }
-
+document.querySelector("input").addEventListener("keydown", (event) => { if (event.keyCode === 13) { if (document.querySelector("input").value != "") { createTask(); document.querySelector("input").value = ""; } else {alert("Error 420: Input must not be empty!"); }}});
 
 function newtask(): void {
         //counter jeweils updaten
@@ -61,14 +31,57 @@ function newtask(): void {
     listdiv.appendChild(eingabefeldtext);
         //
     tasks?.appendChild(listdiv);   
-    
-    
 
-    
-} 
+      //Kindelement appenden
+    tasks.appendChild(listdiv);
+
+        //haeckchen hinzufügen
+    let check: HTMLElement = document.createElement("div");
+    check.className = "far fa-check-square";
+        //Haken gehört div zu
+    listdiv?.appendChild(check);
+        //Hakenclick
+    check.addEventListener("click", checkingoff);
+        //Funktion checking off/on
+    function checkingoff(): void {
+    if (check.getAttribute("class") == "far fa-square") {
+        check.setAttribute("class", "far fa-check-square"); }
+    else {
+        check.setAttribute("class", "far fa-square"); }
+}
+
+        //trash hinzufügen
+    let trash: HTMLElement = document.createElement("div");
+    trash.className = "fas fa-trash";
+                //Trashklick
+    trash.addEventListener("click", deleter);
+                //funktion zum löschen
+    function deleter(): void {
+                    listdiv.parentElement.removeChild(listdiv);
+                    counter--; 
+                    document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+                }
+                //trash gehört div zu
+    listdiv?.appendChild(trash);
+        }
 
 //Buttondruck
 document.querySelector("#addtaskbutton").addEventListener("click", newtask);
 
+ if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; } else {alert("Error 420: Input must not be empty!"); };
 
 }); }
+
+
+
+
+
+ /*
+ // Bei Klick auf Plus mit leererm Input.Value wird ein Alert ausgelöst
+ if (document.querySelector("input").value == "") {
+        counter--;
+        document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+        newtask(); document.querySelector("input").value = "";}
+        else {alert ("Add a new task first!"); }
+} 
+*/
