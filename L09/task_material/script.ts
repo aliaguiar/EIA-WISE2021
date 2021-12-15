@@ -8,42 +8,42 @@ let listdiv: HTMLDivElement = document.createElement("div");
 let counter: number = 0;
 listdiv.textContent = "";
 
-/*document.addEventListener("keydown", function (event: KeyboardEvent): void { if (event.keyCode === 13) { if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; }
-                 else {alert("Add a new task first!"); }}});
-                 */
-
-document.querySelector("input").addEventListener("keydown", (event) => { if (event.keyCode === 13) { if (document.querySelector("input").value != "") { createTask(); document.querySelector("input").value = ""; } else {alert("Error 420: Input must not be empty!"); }}});
+document.addEventListener("keydown", (event: KeyboardEvent): void => { 
+        if (event.keyCode === 13) { 
+                if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; } 
+                else {alert("Add your task first"); }}});
 
 function newtask(): void {
         //counter jeweils updaten
-    counter ++;
-    document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-    console.log("counter");
+counter ++;
+document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+console.log("counter");
         //Text eingegeben
-    let eingabefeldtext: HTMLElement = document.createElement("p");
-    eingabefeldtext.innerHTML = input.value;
-    eingabefeldtext.className = "eingabefeldtext";
-    input.value = "";
+let eingabefeldtext: HTMLElement = document.createElement("p");
+eingabefeldtext.innerHTML = input.value;
+eingabefeldtext.className = "eingabefeldtext";
+
+
         //lokal deklarieren
-    let listdiv: HTMLDivElement = document.createElement("div");
-    let tasks: HTMLElement = document.getElementById("tasks");
+let listdiv: HTMLDivElement = document.createElement("div");
+let tasks: HTMLElement = document.getElementById("tasks");
         //Text in div appenden
-    listdiv.appendChild(eingabefeldtext);
+listdiv.appendChild(eingabefeldtext);
         //
-    tasks?.appendChild(listdiv);   
+tasks?.appendChild(listdiv);   
 
       //Kindelement appenden
-    tasks.appendChild(listdiv);
+tasks.appendChild(listdiv);
 
         //haeckchen hinzufügen
-    let check: HTMLElement = document.createElement("div");
-    check.className = "far fa-check-square";
+let check: HTMLElement = document.createElement("div");
+check.className = "far fa-check-square";
         //Haken gehört div zu
-    listdiv?.appendChild(check);
+listdiv?.appendChild(check);
         //Hakenclick
-    check.addEventListener("click", checkingoff);
+check.addEventListener("click", checkingoff);
         //Funktion checking off/on
-    function checkingoff(): void {
+function checkingoff(): void {
     if (check.getAttribute("class") == "far fa-square") {
         check.setAttribute("class", "far fa-check-square"); }
     else {
@@ -51,37 +51,20 @@ function newtask(): void {
 }
 
         //trash hinzufügen
-    let trash: HTMLElement = document.createElement("div");
-    trash.className = "fas fa-trash";
+let trash: HTMLElement = document.createElement("div");
+trash.className = "fas fa-trash";
                 //Trashklick
-    trash.addEventListener("click", deleter);
+trash.addEventListener("click", deleter);
                 //funktion zum löschen
-    function deleter(): void {
+function deleter(): void {
                     listdiv.parentElement.removeChild(listdiv);
                     counter--; 
                     document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
                 }
                 //trash gehört div zu
-    listdiv?.appendChild(trash);
-        }
+listdiv?.appendChild(trash);
+    
+} 
 
-//Buttondruck
-document.querySelector("#addtaskbutton").addEventListener("click", newtask);
-
- if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; } else {alert("Error 420: Input must not be empty!"); };
 
 }); }
-
-
-
-
-
- /*
- // Bei Klick auf Plus mit leererm Input.Value wird ein Alert ausgelöst
- if (document.querySelector("input").value == "") {
-        counter--;
-        document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-        newtask(); document.querySelector("input").value = "";}
-        else {alert ("Add a new task first!"); }
-} 
-*/

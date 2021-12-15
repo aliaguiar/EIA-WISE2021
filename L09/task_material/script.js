@@ -7,18 +7,17 @@ var L09;
         let listdiv = document.createElement("div");
         let counter = 0;
         listdiv.textContent = "";
-        /*document.addEventListener("keydown", function (event: KeyboardEvent): void { if (event.keyCode === 13) { if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; }
-                         else {alert("Add a new task first!"); }}});
-                         */
-        document.querySelector("input").addEventListener("keydown", (event) => { if (event.keyCode === 13) {
-            if (document.querySelector("input").value != "") {
-                createTask();
-                document.querySelector("input").value = "";
+        document.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                if (document.querySelector("input").value != "") {
+                    newtask();
+                    document.querySelector("input").value = "";
+                }
+                else {
+                    alert("Add your task first");
+                }
             }
-            else {
-                alert("Error 420: Input must not be empty!");
-            }
-        } });
+        });
         function newtask() {
             //counter jeweils updaten
             counter++;
@@ -28,7 +27,6 @@ var L09;
             let eingabefeldtext = document.createElement("p");
             eingabefeldtext.innerHTML = input.value;
             eingabefeldtext.className = "eingabefeldtext";
-            input.value = "";
             //lokal deklarieren
             let listdiv = document.createElement("div");
             let tasks = document.getElementById("tasks");
@@ -68,25 +66,6 @@ var L09;
             //trash gehört div zu
             listdiv?.appendChild(trash);
         }
-        //Buttondruck
-        document.querySelector("#addtaskbutton").addEventListener("click", newtask);
-        if (document.querySelector("input").value != "") {
-            newtask();
-            document.querySelector("input").value = "";
-        }
-        else {
-            alert("Error 420: Input must not be empty!");
-        }
-        ;
     });
 })(L09 || (L09 = {}));
-/*
-// Bei Klick auf Plus mit leererm Input.Value wird ein Alert ausgelöst
-if (document.querySelector("input").value == "") {
-       counter--;
-       document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-       newtask(); document.querySelector("input").value = "";}
-       else {alert ("Add a new task first!"); }
-}
-*/ 
 //# sourceMappingURL=script.js.map
