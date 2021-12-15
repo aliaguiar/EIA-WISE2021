@@ -68,6 +68,7 @@ body{
     bottom:33px;
     left:-710px;
     color: #aec7c1;
+    font-size: 20px;
 }
 
 .fa-check-square{
@@ -75,6 +76,7 @@ body{
     bottom:33px;
     left:-710px;
     color: #aec7c1;
+    font-size: 20px;
 }
 
 .fa-trash{
@@ -82,4 +84,5 @@ body{
     bottom:33px;
     left:-700px;
     color: #aec7c1;
+    font-size: 20px;
 }
