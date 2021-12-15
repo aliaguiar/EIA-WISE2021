@@ -9,6 +9,36 @@ var L09;
         listdiv.textContent = "";
         //Kindelement appenden
         tasks.appendChild(listdiv);
+        //haeckchen hinzufügen
+        let check = document.createElement("div");
+        check.className = "far fa-check-square";
+        let index;
+        //Haken gehört div zu
+        listdiv?.appendChild(check);
+        //Hakenclick
+        check.addEventListener("click", checkingoff);
+        //Funktion checking off/on
+        function checkingoff() {
+            if (check.getAttribute("class") == "far fa-check-square") {
+                check.setAttribute("class", "far fa-square");
+            }
+            else {
+                check.setAttribute("class", "far fa-check-square");
+            }
+        }
+        //trash hinzufügen
+        let trash = document.createElement("div");
+        trash.className = "fas fa-trash";
+        //trash gehört div zu
+        listdiv?.appendChild(trash);
+        //Trashklick
+        trash.addEventListener("click", deleter);
+        //funktion zum löschen
+        function deleter() {
+            listdiv.parentElement.removeChild(listdiv);
+            counter--;
+            document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+        }
         function newtask() {
             //counter jeweils updaten
             counter++;
@@ -26,35 +56,6 @@ var L09;
             listdiv.appendChild(eingabefeldtext);
             //
             tasks?.appendChild(listdiv);
-            //haeckchen hinzufügen
-            let check = document.createElement("i");
-            check.className = "far fa-check-square";
-            //Haken gehört div zu
-            listdiv?.appendChild(check);
-            //Hakenclick
-            check.addEventListener("click", checkingoff);
-            //Funktion checking off/on
-            function checkingoff() {
-                if (check.getAttribute("class") == "far fa-check-square") {
-                    check.setAttribute("class", "far fa-square");
-                }
-                else {
-                    check.setAttribute("class", "far fa-check-square");
-                }
-            }
-            //trash hinzufügen
-            let trash = document.createElement("i");
-            trash.className = "fas fa-trash";
-            //trash gehört div zu
-            listdiv?.appendChild(trash);
-            //Trashklick
-            trash.addEventListener("click", deleter);
-            //funktion zum löschen
-            function deleter() {
-                listdiv.parentElement.removeChild(listdiv);
-                counter--;
-                document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
-            }
         }
         //Buttondruck
         document.querySelector("#addtaskbutton").addEventListener("click", newtask);

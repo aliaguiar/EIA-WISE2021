@@ -61,6 +61,7 @@ body{
     right: 20px;
     width: 710px;
     background-color: #eeeeee;
+    list-style-type: none;
 }
 
 .fa-square{
