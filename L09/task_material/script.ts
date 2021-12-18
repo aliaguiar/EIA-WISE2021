@@ -11,7 +11,7 @@ listdiv.textContent = "";
 document.addEventListener("keydown", (event: KeyboardEvent): void => { 
         if (event.keyCode === 13) { 
                 if (document.querySelector("input").value != "") { newtask(); document.querySelector("input").value = ""; } 
-                else {alert("Add your task first"); }}});
+                else {alert("Add your task first!!!"); }}});
 
 function newtask(): void {
         //counter jeweils updaten

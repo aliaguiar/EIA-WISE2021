@@ -1,0 +1,120 @@
+body{
+    background-color: #eeeeee;
+    font-family: sans-serif;
+}
+
+.insgesamt{
+    position: absolute;
+    left:50%;
+    top: 15px;
+    transform: translate(-50%);
+    background-color: #cdddd9;
+    width: 750px;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.heading{
+    font-family: sans-serif;
+    font-size: 36px;
+    position: relative;
+    left: 50px;
+    color: #585858;
+}
+
+h2{
+    font-family: sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: 25px;
+    color: #585858;
+}
+
+#input{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #585858;
+    position: relative;
+    border-radius: 7px;
+    padding-left: 7px;
+    left: 20px;
+    right: 20px;
+    width: 710px;
+    background-color: #eeeeee;
+}
+
+/*#addtaskbutton{
+    position: relative;
+    bottom:33px;
+    right:-710px;
+    color: #aec7c1;
+}
+*/
+
+.eingabefeldtext{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #585858;
+    position: relative;
+    border-radius: 7px;
+    padding-left: 7px;
+    left: 20px;
+    right: 20px;
+    width: 710px;
+    background-color: #eeeeee;
+    list-style-type: none;
+}
+
+.fa-check-square {
+    pointer-events: all;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    font-size: 20px;
+    color: #aec7c1;
+}
+
+.fa-check-square:hover {
+    pointer-events: all;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    font-size: 20px;
+    color: #aec7c1;
+    opacity: 30%;
+    cursor: pointer;
+}
+
+.fa-square {
+    font-size: 20px;
+    position: relative;
+    margin-left: 680px;
+    bottom: 48px;
+    color: #aec7c1;
+    opacity: 100%;
+}
+
+.fa-square:hover {
+    opacity:30%;
+    cursor: pointer;
+}
+
+.fa-trash:active {
+    color: #aec7c1;
+}
+
+.fa-trash {
+    opacity: 100%;
+    pointer-events: all;
+    position: relative;
+    margin-left: 705px;
+    bottom: 75px;
+    font-size: 20px;
+    color: #aec7c1;
+}
+
+.fa-trash:hover {
+    opacity: 30%;
+    cursor: pointer;
+    color: #aec7c1;
+}

@@ -1,11 +1,13 @@
-var L09;
-(function (L09) {
+var L10;
+(function (L10) {
     window.addEventListener("load", function () {
         //Variablen
         let tasks = document.getElementById("tasks");
         let input = document.querySelector("#input");
         let listdiv = document.createElement("div");
         let counter = 0;
+        let done = 0;
+        let open = 0;
         listdiv.textContent = "";
         document.addEventListener("keydown", (event) => {
             if (event.keyCode === 13) {
@@ -14,14 +16,16 @@ var L09;
                     document.querySelector("input").value = "";
                 }
                 else {
-                    alert("Add your task first!!!");
+                    alert("Add your task first");
                 }
             }
         });
         function newtask() {
             //counter jeweils updaten
             counter++;
-            document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+            open++;
+            document.querySelector(".total").innerHTML = "Total: " + counter;
+            document.querySelector(".open").innerHTML = "Open: " + open;
             console.log("counter");
             //Text eingegeben
             let eingabefeldtext = document.createElement("p");
@@ -47,9 +51,20 @@ var L09;
             function checkingoff() {
                 if (check.getAttribute("class") == "far fa-square") {
                     check.setAttribute("class", "far fa-check-square");
+                    //mit hakenzustand ändert sich der done/ open status
+                    //abhaken
+                    done++;
+                    open--;
+                    document.querySelector(".done").innerHTML = "Done: " + done;
+                    document.querySelector(".open").innerHTML = "Open: " + open;
                 }
                 else {
                     check.setAttribute("class", "far fa-square");
+                    //abhaken rückgängig machen
+                    done--;
+                    open++;
+                    document.querySelector(".done").innerHTML = "Done: " + done;
+                    document.querySelector(".open").innerHTML = "Open: " + open;
                 }
             }
             //trash hinzufügen
@@ -60,12 +75,22 @@ var L09;
             //funktion zum löschen
             function deleter() {
                 listdiv.parentElement.removeChild(listdiv);
+                //done/open updaten
+                if (check.getAttribute("class") == "far fa-square") {
+                    open--;
+                    document.querySelector(".open").innerHTML = "Open: " + open;
+                }
+                else {
+                    done--;
+                    document.querySelector(".done").innerHTML = "Done: " + done;
+                }
+                //counter updaten
                 counter--;
-                document.querySelector(".total").innerHTML = "Task(s) total: " + counter;
+                document.querySelector(".total").innerHTML = "Total: " + counter;
             }
             //trash gehört div zu
             listdiv?.appendChild(trash);
         }
     });
-})(L09 || (L09 = {}));
+})(L10 || (L10 = {}));
 //# sourceMappingURL=script.js.map
