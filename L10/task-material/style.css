@@ -118,3 +118,21 @@ h2{
     cursor: pointer;
     color: #aec7c1;
 }
+
+.fa-microphone {
+    font-size: 20px;
+    color: #aec7c1;
+    position: relative;
+    bottom: 2px;
+    right: 15px;
+}
+
+.fa-microphone:hover {
+    font-size: 20px;
+    color: #aec7c1;
+    position: relative;
+    bottom: 2px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 30%;
+}

@@ -1,5 +1,7 @@
 var L10;
 (function (L10) {
+    // tslint:disable: no-any
+    // tslint:disable: typedef
     window.addEventListener("load", function () {
         //Variablen
         let tasks = document.getElementById("tasks");
@@ -8,6 +10,7 @@ var L10;
         let counter = 0;
         let done = 0;
         let open = 0;
+        let mike = document.getElementById("fa-microphone");
         listdiv.textContent = "";
         document.addEventListener("keydown", (event) => {
             if (event.keyCode === 13) {
@@ -90,6 +93,16 @@ var L10;
             }
             //trash gehört div zu
             listdiv?.appendChild(trash);
+        }
+        document.addEventListener("mousedown", startartyom());
+        //setzt zuhören in aktion
+        function startartyom() {
+            artyom.initialize({
+                lang: "en-GB",
+                continuous: false,
+                debug: true,
+                listen: true
+            });
         }
     });
 })(L10 || (L10 = {}));

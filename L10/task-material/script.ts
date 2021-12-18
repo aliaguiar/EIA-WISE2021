@@ -1,4 +1,6 @@
 namespace L10 {
+    // tslint:disable: no-any
+    // tslint:disable: typedef
     window.addEventListener("load", function(): void {
     
     //Variablen
@@ -8,6 +10,7 @@ namespace L10 {
     let counter: number = 0;
     let done: number = 0;
     let open: number = 0;
+    let mike: HTMLElement = document.getElementById("fa-microphone");
     listdiv.textContent = "";
     
     document.addEventListener("keydown", (event: KeyboardEvent): void => { 
@@ -26,8 +29,6 @@ namespace L10 {
     let eingabefeldtext: HTMLElement = document.createElement("p");
     eingabefeldtext.innerHTML = input.value;
     eingabefeldtext.className = "eingabefeldtext";
-    
-    
             //lokal deklarieren
     let listdiv: HTMLDivElement = document.createElement("div");
     let tasks: HTMLElement = document.getElementById("tasks");
@@ -86,8 +87,18 @@ namespace L10 {
     //trash gehört div zu
     listdiv?.appendChild(trash);
 
-    
-
     } 
+
+    document.addEventListener("mousedown", startartyom())
+
+    //setzt zuhören in aktion
+    function startartyom() {
+        artyom.initialize({
+                lang: "en-GB",
+                continuous: false,
+                debug: true,
+                listen: true
+        });
+    }
     
     }); }
