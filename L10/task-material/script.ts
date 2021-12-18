@@ -83,8 +83,10 @@ namespace L10 {
                         counter--; 
                         document.querySelector(".total").innerHTML = "Total: " + counter;
                     }
-                    //trash gehört div zu
+    //trash gehört div zu
     listdiv?.appendChild(trash);
+
+    
 
     } 
     
