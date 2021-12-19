@@ -110,6 +110,19 @@ namespace L10 {
     let input: HTMLInputElement = document.querySelector("#input");
     const mike: HTMLElement = document.querySelector(".fa-microphone");
 
+            //aufnahme anwenden
+    mike.addEventListener("click", function(): void {
+                if (mike.getAttribute("class") == "fas fa-microphone") {
+                        mike.setAttribute("class", "fas fa-microphone-slash");
+                        record();
+                        console.log("listening");
+                } else { 
+                        mike.setAttribute("class", "fas fa-microphone");
+                        stop();
+                        console.log("'not listening'");     
+                } 
+            });
+
     artyom.addCommands({
         indexes: ["New task *", "Add * to the list", "Add *", "Write down *", "Enter new task *"],
         smart: true,
@@ -142,15 +155,5 @@ namespace L10 {
         artyom.fatality();
     }
 
-             //aufnahme anwenden
-    mike.addEventListener("click", function(): void {
-        if (mike.getAttribute("class") == "fas fa-microphone") {
-                mike.setAttribute("class", "fas fa-microphone-slash");
-                record();
-        } else { 
-                mike.setAttribute("class", "fas fa-microphone");
-                stop();
-        } 
-    });
 
 }

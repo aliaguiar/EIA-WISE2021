@@ -105,6 +105,19 @@ var L10;
     const artyom = new Artyom();
     let input = document.querySelector("#input");
     const mike = document.querySelector(".fa-microphone");
+    //aufnahme anwenden
+    mike.addEventListener("click", function () {
+        if (mike.getAttribute("class") == "fas fa-microphone") {
+            mike.setAttribute("class", "fas fa-microphone-slash");
+            record();
+            console.log("listening");
+        }
+        else {
+            mike.setAttribute("class", "fas fa-microphone");
+            stop();
+            console.log("'not listening'");
+        }
+    });
     artyom.addCommands({
         indexes: ["New task *", "Add * to the list", "Add *", "Write down *", "Enter new task *"],
         smart: true,
@@ -132,16 +145,5 @@ var L10;
     function stop() {
         artyom.fatality();
     }
-    //aufnahme anwenden
-    mike.addEventListener("click", function () {
-        if (mike.getAttribute("class") == "fas fa-microphone") {
-            mike.setAttribute("class", "fas fa-microphone-slash");
-            record();
-        }
-        else {
-            mike.setAttribute("class", "fas fa-microphone");
-            stop();
-        }
-    });
 })(L10 || (L10 = {}));
 //# sourceMappingURL=script.js.map
