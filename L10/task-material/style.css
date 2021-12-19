@@ -136,3 +136,21 @@ h2{
     cursor: pointer;
     opacity: 30%;
 }
+
+.fa-microphone-slash {
+    font-size: 20px;
+    color: #aec7c1;
+    position: relative;
+    bottom: 2px;
+    right: 15px;
+}
+
+.fa-microphone-slash:hover {
+    font-size: 20px;
+    color: #aec7c1;
+    position: relative;
+    bottom: 2px;
+    right: 15px;
+    cursor: pointer;
+    opacity: 30%;
+}
